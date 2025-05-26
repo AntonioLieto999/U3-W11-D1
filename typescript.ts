@@ -7,13 +7,13 @@ let anni: number = 25;
 let Studio: boolean = true;
 
 // 3-
-const greet = (nome) => {
-  return "ciao " + nome;
+const greet = (n) => {
+  return "ciao " + n;
 };
 console.log(greet(nome));
 
 // 4-
-const sum = (a: number, b: number) => {
+const sum = (a: number, b: number): number => {
   return a + b;
 };
 console.log(sum(2, 5), typeof sum(2, 7));
@@ -26,7 +26,7 @@ function iva(num) {
 console.log(iva(200));
 
 // 6-
-function parole(x: string, y: string) {
+function parole(x: string, y: string): number {
   return x.length + y.length;
 }
 console.log(parole("giovanni", "lorenzo"));
@@ -52,7 +52,7 @@ let tupla: [string, string, string, number, number] = ["a", "b", "c", 10, 20];
 // type: quando vuoi definire un alias per un tipo complesso, includere unioni, tuple, tipi primitivi o comporre tipi con intersezioni.
 
 // 13-
-interface io {
+interface formaDiVita {
   mioNome: string;
   mioCognome: string;
   mieiAnni: number;
@@ -65,12 +65,12 @@ interface utente {
 }
 
 // 15-
-type Studenti = {
+type Studente = {
   nome: string;
   voto: number;
 };
 
-let studenti: Studenti[] = [
+let studenti: Studente[] = [
   { nome: "antonio", voto: 18 },
   { nome: "giuseppe", voto: 24 },
   { nome: "giovanni", voto: 30 },
@@ -105,8 +105,8 @@ const MiaAuto: Auto = {
 // Si
 
 // 20
-interface responsApi<x> {
+interface responsApi<X> {
   risposta: boolean;
-  dati: x;
+  dati: X;
   error?: string;
 }
